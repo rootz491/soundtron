@@ -83,7 +83,6 @@ body {
 }
 
 .wrapper header {
-  position: fixed;
   width: 100%;
   padding: 2em;
   color: #4B4453;
@@ -112,7 +111,7 @@ body {
 .wrapper #content-wrapper {
   width: 100%;
   height: auto;
-  padding: 8em;
+  padding: 0 8em;
 }
 
 .wrapper #content-wrapper #genue {
@@ -126,7 +125,7 @@ body {
 }
 
 .wrapper #content-wrapper #genue #artist-wrapper {
-  height: 100%;
+  height: auto;
   width: 100%;
   display: -ms-grid;
   display: grid;
@@ -202,13 +201,37 @@ body {
   background-size: cover;
 }
 
-.wrapper #footer {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(9) {
+  background-image: url("../artist/marshmallow.jpeg");
+  background-size: cover;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(10) {
+  background-image: url("../artist/50cent.jpg");
+  background-size: cover;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(11) {
+  background-image: url("../artist/alan.jpg");
+  background-size: cover;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(12) {
+  background-image: url("../artist/juice.jpg");
+  background-size: cover;
 }
 
 .wrapper #footer p {
-  padding: 3em 4em;
+  padding: 3em 0;
+  text-align: end;
+}
+
+@media screen and (max-width: 450px) {
+  #artist-wrapper {
+    display: block;
+  }
+  #artist-wrapper div {
+    width: 70%;
+  }
 }
 /*# sourceMappingURL=index.css.map */

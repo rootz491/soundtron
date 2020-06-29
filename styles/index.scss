@@ -90,7 +90,7 @@ body {
     }
 
     header {
-        position: fixed;
+        
         width: 100%;
         padding: 2em;
         color: color("secondary");
@@ -117,7 +117,7 @@ body {
        
         width: 100%;
        height: auto;
-       padding: 8em;
+       padding: 0 8em;
         
         #genue {
             height: 100%;
@@ -129,7 +129,7 @@ body {
             }
 
             #artist-wrapper {
-                height: 100%;
+                height: auto;
                 width: 100%;
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -193,6 +193,26 @@ body {
                     background-image: url("../artist/chainsmokers.png");
                     background-size: cover;
                 }
+                
+                div:nth-of-type(9) {
+                    background-image: url("../artist/marshmallow.jpeg");
+                    background-size: cover;
+                }
+
+                div:nth-of-type(10) {
+                    background-image: url("../artist/50cent.jpg");
+                    background-size: cover;
+                }
+
+                div:nth-of-type(11) {
+                    background-image: url("../artist/alan.jpg");
+                    background-size: cover;
+                }
+
+                div:nth-of-type(12) {
+                    background-image: url("../artist/juice.jpg");
+                    background-size: cover;
+                }
             }
 
         }
@@ -202,12 +222,9 @@ body {
     }
 
     #footer {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-
         p {
-            padding: 3em 4em;    
+            padding: 3em 0;   
+            text-align: end; 
         }
     }
 
@@ -228,5 +245,11 @@ body {
 }
 
 @media screen and (max-width: 450px) {
+    #artist-wrapper {
+        display: block;
 
+        div {
+            width: 70%;
+        }
+    }
 }
