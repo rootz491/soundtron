@@ -1,0 +1,205 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: none;
+}
+
+body {
+  background-color: #B0A8B9;
+  min-height: 100vh;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapper #menu #checkbox {
+  display: none;
+}
+
+.wrapper #menu #checkbox:checked ~ #side-nav {
+  left: 0%;
+}
+
+.wrapper #menu #checkbox:checked ~ label > i {
+  color: #B0A8B9;
+}
+
+.wrapper #menu label > i {
+  position: fixed;
+  margin: 1em 2em;
+  cursor: pointer;
+  font-size: 2em;
+  z-index: 999;
+  color: #4B4453;
+}
+
+.wrapper #menu div#side-nav {
+  background-color: #4B4453;
+  color: #B0A8B9;
+  position: fixed;
+  left: -30%;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  width: 30%;
+  height: 100%;
+}
+
+.wrapper #menu div#side-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 10em;
+  margin-left: 2em;
+}
+
+.wrapper #menu div#side-nav li {
+  padding: 2em;
+}
+
+.wrapper #menu div#side-nav li i {
+  font-size: 2rem;
+  padding-right: 1em;
+}
+
+.wrapper #menu div#side-nav li a {
+  color: #B0A8B9;
+  font-size: 1.5em;
+}
+
+.wrapper #menu div#side-nav li:hover {
+  padding-left: 3em;
+}
+
+.wrapper header {
+  position: fixed;
+  width: 100%;
+  padding: 2em;
+  color: #4B4453;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper header #main-heading:hover {
+  cursor: pointer;
+}
+
+.wrapper header #guest {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper header #guest i {
+  font-size: 2em;
+  margin-right: .5em;
+}
+
+.wrapper #content-wrapper {
+  width: 100%;
+  height: auto;
+  padding: 8em 8em 0 8em;
+}
+
+.wrapper #content-wrapper #genue {
+  height: 100%;
+  margin: 0 auto;
+}
+
+.wrapper #content-wrapper #genue h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  gap: 2em 2em;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 200px;
+  width: 100%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-color: #fff;
+  -webkit-box-shadow: 6px 6px 14px black;
+          box-shadow: 6px 6px 14px black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div:hover {
+  background: none;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(1) {
+  background-image: url("../artist/eminem.jpg");
+  background-size: cover;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(2) {
+  background-image: url("../artist/ritviz.jpg");
+  background-size: cover;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(3) {
+  background-image: url("../artist/ed.jpg");
+  background-size: cover;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(4) {
+  background-image: url("../artist/maroon5.jpg");
+  background-size: cover;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(5) {
+  background-image: url("../artist/lil dicky.jpg");
+  background-size: cover;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(6) {
+  background-image: url("../artist/NF.png");
+  background-size: cover;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(7) {
+  background-image: url("../artist/BTS.jpg");
+  background-size: cover;
+}
+
+.wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(8) {
+  background-image: url("../artist/chainsmokers.png");
+  background-size: cover;
+}
+/*# sourceMappingURL=index.css.map */
