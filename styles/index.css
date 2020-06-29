@@ -14,7 +14,8 @@ body {
 }
 
 .wrapper {
-  height: 100vh;
+  position: relative;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -32,7 +33,7 @@ body {
 
 .wrapper #menu label > i {
   position: fixed;
-  margin: 1em 2em;
+  margin: 2em;
   cursor: pointer;
   font-size: 2em;
   z-index: 999;
@@ -43,11 +44,12 @@ body {
   background-color: #4B4453;
   color: #B0A8B9;
   position: fixed;
-  left: -30%;
+  left: -500px;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  width: 30%;
+  width: 500px;
   height: 100%;
+  z-index: 10;
 }
 
 .wrapper #menu div#side-nav ul {
@@ -85,6 +87,7 @@ body {
   width: 100%;
   padding: 2em;
   color: #4B4453;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,28 +99,20 @@ body {
           align-items: center;
 }
 
+.wrapper header #main-heading h1 {
+  padding: 1em;
+  background-color: #B0A8B9;
+  border-radius: 1em;
+}
+
 .wrapper header #main-heading:hover {
   cursor: pointer;
-}
-
-.wrapper header #guest {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.wrapper header #guest i {
-  font-size: 2em;
-  margin-right: .5em;
 }
 
 .wrapper #content-wrapper {
   width: 100%;
   height: auto;
-  padding: 8em 8em 0 8em;
+  padding: 8em;
 }
 
 .wrapper #content-wrapper #genue {
@@ -135,8 +130,8 @@ body {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   -ms-grid-rows: (1fr)[2];
       grid-template-rows: repeat(2, 1fr);
   gap: 2em 2em;
@@ -157,10 +152,14 @@ body {
           box-shadow: 6px 6px 14px black;
   border-radius: 5px;
   cursor: pointer;
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
 }
 
 .wrapper #content-wrapper #genue #artist-wrapper div:hover {
-  background: none;
+  opacity: 0.3;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
 }
 
 .wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(1) {
@@ -201,5 +200,15 @@ body {
 .wrapper #content-wrapper #genue #artist-wrapper div:nth-of-type(8) {
   background-image: url("../artist/chainsmokers.png");
   background-size: cover;
+}
+
+.wrapper #footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.wrapper #footer p {
+  padding: 3em 4em;
 }
 /*# sourceMappingURL=index.css.map */

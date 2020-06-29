@@ -23,7 +23,8 @@ body {
 }
 
 .wrapper {
-    height: 100vh;
+    position: relative;
+    min-height: 100vh;
     width: 100%;
 
     #menu {
@@ -41,7 +42,7 @@ body {
 
         label > i {
             position: fixed;
-            margin: 1em 2em ;
+            margin: 2em;
             cursor: pointer;
             font-size: 2em;
             z-index: 999;
@@ -54,10 +55,11 @@ body {
             background-color: color("secondary");
             color: color("primary");
             position: fixed;
-            left: -30%;
+            left: -500px;
             transition: all .5s ease-in-out;
-            width: 30%;
+            width: 500px;
             height: 100%;
+            z-index: 10;
     
             ul {
                 display: flex;
@@ -92,33 +94,30 @@ body {
         width: 100%;
         padding: 2em;
         color: color("secondary");
+        text-align: center;
     
         display: flex;
         justify-content: space-between;
         align-items: center;
     
         #main-heading {
+            h1 {
+                padding: 1em;
+                background-color: color("primary");
+                border-radius: 1em;
+            }
             &:hover {
                 cursor: pointer;
-            }
-        }
-    
-        #guest {
-            display: flex;
-            align-items: center;
-    
-            i {
-                font-size: 2em;
-                margin-right: .5em;
             }
         }
         
     }
 
     #content-wrapper {
+       
         width: 100%;
        height: auto;
-       padding: 8em 8em 0 8em;
+       padding: 8em;
         
         #genue {
             height: 100%;
@@ -133,7 +132,7 @@ body {
                 height: 100%;
                 width: 100%;
                 display: grid;
-                grid-template-columns: repeat(4,1fr);
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
                 grid-template-rows: repeat(2,1fr);
                 gap: 2em 2em;
 
@@ -147,10 +146,11 @@ body {
                     box-shadow: 6px 6px 14px black;
                     border-radius: 5px;
                     cursor: pointer;
-                   
+                    filter : grayscale(0%);
                 
                     &:hover {
-                        background: none;
+                        opacity: 0.3;
+                        filter : grayscale(100%);
                     }
                 }
 
@@ -197,11 +197,36 @@ body {
 
         }
      
-
         
+        
+    }
+
+    #footer {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        p {
+            padding: 3em 4em;    
+        }
     }
 
 }
 
 
 
+@media screen and (max-width: 750px) {
+  
+}
+
+@media screen and (max-width: 900px) {
+
+}
+
+@media screen and (max-width: 1100px) {
+
+}
+
+@media screen and (max-width: 450px) {
+
+}
